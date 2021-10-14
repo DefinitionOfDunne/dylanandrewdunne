@@ -75,9 +75,8 @@ header {
 }
 
 #main-logo {
-    width: auto;
-    height: 80vh;
-    ;
+   max-width: 100%;
+    max-height: 80vh;
 }
 
 .navbar {
