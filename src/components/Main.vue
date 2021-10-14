@@ -3,14 +3,13 @@
         <header>
             <img id="main-logo" alt="Main Logo" src="../assets/DAD-logo.png">
             <div class="arrow bounce">
-                <a @click="scrollToElement" id="arrow-link">
-                    <img id="double-down" src="../assets/double-down.png">
+                <a @click="scrollToElement" class="arrow-link">
+                    <img class="double-down" src="../assets/double-down.png">
                 </a>
             </div>
         </header>
         <div>
-            <b-navbar toggleable="lg" type="light">
-                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+            <b-navbar type="light">
                 <b-navbar-nav class="navbar navbar-default center">
                     <b-nav-item href="#">About</b-nav-item>
                     <b-nav-item href="#contact-wrapper">
@@ -51,12 +50,20 @@ export default {
     methods: {
         scrollToElement() {
             const el = this.$el.getElementsByClassName('about-section')[0];
+            const dd = this.$el.getElementsByClassName('double-down')[0];
+            const foo = this.$el.getElementsByClassName('arrow')[0];
+
 
             if (el) {
                 // Use el.scrollIntoView() to instantly scroll to the element
                 el.scrollIntoView({ behavior: 'smooth' });
             }
-        }
+            this.deleteImg(dd, foo)
+        },
+        deleteImg(arrowElement, wrapperElement) {
+        arrowElement.remove();
+        wrapperElement.remove();
+    }
     }
 };
 </script>
@@ -142,11 +149,11 @@ a {
     animation: bounce 2s infinite;
 }
 
-#arrow-link {
+.arrow-link {
     display: inline-block;
 }
 
-#double-down {
+.double-down {
     width: auto;
     height: 20vh;
 }
