@@ -3,11 +3,11 @@
         <div class="job-specs">
             <h2 class="job-title">{{ this.jobTitle }} </h2>
             <p class="company-name">{{ this.companyName }} </p>
-            <p class="startDate"> {{ this.startDate }}</p>
+            <p class="startDate"> {{ this.startDate }} - </p>
             <p class="endDate"> {{ this.endDate }}</p>
         </div>
         <div class="job-desc">
-        <li v-for="(descrip, index) in description" :key="index">
+        <li class="desc-p" v-for="(descrip, index) in description" :key="index">
             {{ descrip }}
         </li>
         </div>
@@ -35,18 +35,18 @@ export default {
 }
 
 .job-title {
+    color: #7d938a;
     font-size: 1.5rem;
 }
 .job-specs {
-    color: purple;
+    color: gray;
     text-transform: uppercase;
     width: 25%;
+    font-weight: bold;
 }
 
 .job-specs p {
     margin: 0;
-    padding: 0;
-    border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -60,7 +60,12 @@ export default {
 .company-name {
     color: gray;
     margin: 10px;
+    padding-bottom: 10px;
     font-family: 'Playfair Display', sans-serif;
     font-size: 20px;
+}
+
+.desc-p {
+    padding: 0 10px 10px 10px;
 }
 </style>

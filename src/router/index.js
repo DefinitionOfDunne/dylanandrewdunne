@@ -6,7 +6,8 @@ import Main from '@/components/Main'
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
+    routes: [
+        {
             path: '/resume',
             name: 'Resume',
             component: Resume

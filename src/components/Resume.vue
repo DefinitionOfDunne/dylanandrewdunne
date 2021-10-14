@@ -7,20 +7,18 @@
             <div id="resume-body">
                 <ul>
                     <h1 class="section-title">Software Engineering</h1>
-                    <li v-for="(job, index) in jobs" :key="index">
+                    <li class="job-blob" v-for="(job, index) in filterJobsByType" :key="index">
                         <ResumeEntry v-if="job.type === 'Information Technology' " :companyName="job.company" :jobTitle="job.jobTitle" :description="job.description" :startDate="job.startDate" :endDate="job.endDate"></ResumeEntry>
                     </li>
-                    <h1>Leadership & Consulting</h1>
-                    <li v-for="(job, index) in jobs" :key="'A' + index">
+                    <h1 class="section-title">Leadership & Consulting</h1>
+                    <li class="job-blob" v-for="(job, index) in filterJobsByType2" :key="'A' + index">
                         <ResumeEntry v-if="job.type === 'Other' " :companyName="job.company" :jobTitle="job.jobTitle" :description="job.description" :startDate="job.startDate" :endDate="job.endDate"></ResumeEntry>
                     </li>
-                    <h1>Education</h1>
-                    <li v-for="(job, index) in jobs" :key="'B' + index">
+                    <h1 class="section-title">Education</h1>
+                    <li class="job-blob" v-for="(job, index) in filterJobsByType3" :key="'B' + index">
                         <ResumeEntry v-if="job.type === 'Education'" :companyName="job.company" :jobTitle="job.jobTitle" :description="job.description" :startDate="job.startDate" :endDate="job.endDate"></ResumeEntry>
                     </li>
                 </ul>
-            </div>
-            <div id="resume-sidebar">
             </div>
         </section>
     </div>
@@ -37,6 +35,17 @@ export default {
 
     async mounted() {
         this.jobs = await this.getJobExperience();
+    },
+    computed: {
+        filterJobsByType: function() {
+            return this.jobs.filter(jobs => jobs.type == "Information Technology")
+        },
+        filterJobsByType2: function() {
+            return this.jobs.filter(jobs => jobs.type == "Other")
+        },
+        filterJobsByType3: function() {
+            return this.jobs.filter(jobs => jobs.type == "Education")
+        },
     },
     methods: {
         getJobExperience: async () => {
@@ -92,7 +101,7 @@ export default {
 }
 
 #main-logo {
-    width: 5rem;
+    width: 30%;
 }
 
 #headshot {
@@ -100,23 +109,23 @@ export default {
 
 }
 .section-title {
-  margin: 5px; 
+    text-align: center;
+    margin: 15px;
+    color: #7d938a; 
 }
 
 #resume-body {
     height: 100%;
     width: 75%;
-    float: left;
+    display: inline-block;
     background-color: white;
     text-align: left;
 }
 
-#resume-sidebar {
-    background-color: #ededed;
-    color: #424040;
-    height: 100%;
-    width: 25%;
-    float: right;
+.job-blob {
+    background-color: white;
+    border-radius: 25%;
+    margin: 5px;
 }
 
 ul {
