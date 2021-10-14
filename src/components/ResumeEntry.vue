@@ -3,13 +3,15 @@
         <div class="job-specs">
             <h2 class="job-title">{{ this.jobTitle }} </h2>
             <p class="company-name">{{ this.companyName }} </p>
-            <p class="startDate"> {{ this.startDate }} - </p>
-            <p class="endDate"> {{ this.endDate }}</p>
+            <div class="date-wrapper">
+                <p class="startDate"> {{ this.startDate }} - </p>
+                <p class="endDate"> {{ this.endDate }}</p>
+            </div>
         </div>
         <div class="job-desc">
-        <li class="desc-p" v-for="(descrip, index) in description" :key="index">
-            {{ descrip }}
-        </li>
+            <li class="desc-p" v-for="(descrip, index) in description" :key="index">
+                {{ descrip }}
+            </li>
         </div>
     </div>
 </template>
@@ -38,6 +40,7 @@ export default {
     color: #7d938a;
     font-size: 1.5rem;
 }
+
 .job-specs {
     color: gray;
     text-transform: uppercase;
@@ -51,9 +54,10 @@ export default {
     font: inherit;
     vertical-align: baseline;
 }
+
 .job-desc {
     width: 65%;
-    margin: 0rem 0rem 0rem 3rem;
+    margin: 0px 0px 0px 15px;
     text-align: left;
 }
 
@@ -67,5 +71,34 @@ export default {
 
 .desc-p {
     padding: 0 10px 10px 10px;
+}
+
+@media only screen and (max-width: 650px) {
+
+    .job-specs {
+        width: 100%;
+    }
+
+    .resume-item {
+        display: block;
+    }
+
+    .job-desc {
+        width: 95%;
+        margin: 10px 0px 0px 0px !important;
+    }
+
+    .desc-p {
+        width: 100%;
+    }
+
+    .date-wrapper {
+        display: block;
+    }
+
+    .startDate {
+        float: left;
+        text-align: center;
+    }
 }
 </style>

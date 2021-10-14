@@ -1,6 +1,17 @@
 <template>
     <div>
         <header>
+           <div>
+                <b-navbar toggleable="lg" type="light">
+                    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                    <b-collapse id="nav-collapse" is-nav>
+                        <b-navbar-nav class="ml-auto">
+                            <router-link to="/">Home</router-link>
+                            <router-link to="/contact">Contact</router-link>
+                        </b-navbar-nav>
+                    </b-collapse>
+                </b-navbar>
+            </div>
             <img id="main-logo" alt="Main Logo" src="../assets/DAD-logo.png">
         </header>
         <section id="main-wrapper">
@@ -132,5 +143,11 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+}
+@media only screen and (max-width: 650px) {
+
+    .section-title {
+        margin-bottom: 25px;
+    }
 }
 </style>
