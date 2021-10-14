@@ -1,17 +1,16 @@
 <template>
     <div>
+        <div>
+            <b-navbar type="light">
+                <b-navbar-nav class="navbar navbar-default center">
+                    <b-nav-item href="/">About</b-nav-item>
+                    <b-nav-item href="#contact-wrapper">
+                        <router-link to="/contact">Contact</router-link>
+                    </b-nav-item>
+                </b-navbar-nav>
+            </b-navbar>
+        </div>
         <header>
-           <div>
-                <b-navbar toggleable="lg" type="light">
-                    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-                    <b-collapse id="nav-collapse" is-nav>
-                        <b-navbar-nav class="ml-auto">
-                            <router-link to="/">Home</router-link>
-                            <router-link to="/contact">Contact</router-link>
-                        </b-navbar-nav>
-                    </b-collapse>
-                </b-navbar>
-            </div>
             <img id="main-logo" alt="Main Logo" src="../assets/DAD-logo.png">
         </header>
         <section id="main-wrapper">
