@@ -103,4 +103,8 @@ a {
 a img {
     display: block;
 }
+
+main {
+    padding-bottom: 10rem;
+}
 </style>
