@@ -1,5 +1,12 @@
 # dylanandrewdunne
 
+## Built Using
+```
+Vue.js
+Netlify
+Contentful
+```
+
 ## Project setup
 ```
 npm install
