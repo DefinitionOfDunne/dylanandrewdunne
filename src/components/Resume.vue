@@ -5,7 +5,7 @@
                 <b-navbar-nav class="navbar navbar-default center">
                     <b-nav-item href="/">About</b-nav-item>
                     <b-nav-item href="#contact-wrapper">
-                        <router-link to="/contact">Contact</router-link>
+                        <router-link tag="li" to="/contact">Contact</router-link>
                     </b-nav-item>
                 </b-navbar-nav>
             </b-navbar>

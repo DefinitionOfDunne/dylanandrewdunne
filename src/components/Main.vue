@@ -8,21 +8,21 @@
                 </a>
             </div>
         </header>
-        <div>
-            <b-navbar type="light">
-                <b-navbar-nav class="navbar navbar-default center">
-                    <b-nav-item href="#">About</b-nav-item>
-                    <b-nav-item href="#contact-wrapper">
-                        <router-link to="/resume">Career History</router-link>
-                    </b-nav-item>
-                    <b-nav-item href="#contact-wrapper">
-                        <router-link to="/contact">Contact</router-link>
-                    </b-nav-item>
-                </b-navbar-nav>
-            </b-navbar>
-        </div>
         <main>
             <section class="about-section">
+                <div id="nav-wrapper">
+                    <b-navbar type="light">
+                        <b-navbar-nav class="navbar navbar-default center">
+                            <b-nav-item href="#">About</b-nav-item>
+                            <b-nav-item href="#contact-wrapper">
+                                <router-link tag="li" class="nav-item" to="/resume">Career History</router-link>
+                            </b-nav-item>
+                            <b-nav-item href="#contact-wrapper">
+                                <router-link tag="li" to="/contact">Contact</router-link>
+                            </b-nav-item>
+                        </b-navbar-nav>
+                    </b-navbar>
+                </div>
                 <div id="headshot-div">
                     <img id="headshot" src="../assets/dad-headshot.jpg">
                 </div>
@@ -30,7 +30,8 @@
                     <p class="bio-paragraph"> Hey, I'm Dylan. Thank you for stopping by my little website.</p>
                     <p class="bio-paragraph">I'm an application engineer based out of Detroit, MI. I currently work in the health insurance space where I build and improve applications that pharmacies rely on to process hundreds of thousands of pharmacy claims every month.</p>
                     <p class="bio-paragraph">I'm passionate about design, clean code, and trying my best to keep up with the constant barrage of new and exciting web dev tools. </p>
-                    <p class="bio-paragraph">In my free time, I enjoy unironically supporting all <a href="https://fivethirtyeight.com/features/detroit-is-the-capital-of-bad-sports-right-now/" target="_blank">Detroit sports teams</a>, working around the house on DIY projects that I've poached from Instagram, and exploring the latest restaurants and bars that pop up around the city</p>
+                    <p class="bio-paragraph">In my free time, I enjoy unironically supporting all <a href="https://fivethirtyeight.com/features/detroit-is-the-capital-of-bad-sports-right-now/" target="_blank">Detroit sports teams</a>, working around the house on DIY projects that I've poached from Instagram, and exploring the latest restaurants and bars that pop up around the city.</p>
+                    <p class="bio-paragraph">Please poke around my site if you'd like to learn a little bit more about me and my work. If you're interested in working together, don't hesitate to get in touch!</p>
                 </div>
             </section>
         </main>
@@ -61,9 +62,9 @@ export default {
             this.deleteImg(dd, foo)
         },
         deleteImg(arrowElement, wrapperElement) {
-        arrowElement.remove();
-        wrapperElement.remove();
-    }
+            arrowElement.remove();
+            wrapperElement.remove();
+        }
     }
 };
 </script>
@@ -75,7 +76,7 @@ header {
 }
 
 #main-logo {
-   max-width: 100%;
+    max-width: 100%;
     max-height: 80vh;
 }
 
@@ -88,27 +89,40 @@ header {
     display: inline-block;
     vertical-align: top;
     text-align: center;
+    font-weight: bold;
 }
 
 .about-section {
     width: 90%;
-    display: flex;
+    display: inline-block;
     padding: 10px;
+    height: 100vh;
+}
+
+.nav-link {
+    padding: 1rem 1rem;
 }
 
 #bio-div {
     width: 80%;
-    padding: 10px;
+    padding: 25px;
+    margin: auto;
+}
+
+#nav-wrapper {
+    padding: 1rem 1rem;
 }
 
 #headshot-div {
-    width: 20%;
-    padding: 10px;
+    width: 100%;
+    margin: 4rem auto;
 }
 
 #headshot {
-    max-width: 75%;
+    max-width: 25%;
+    border-style: solid;
     border-radius: 50%;
+    border-color: #7d938a;
 }
 
 .bio-paragraph {
@@ -116,7 +130,7 @@ header {
     font-family: Open Sans;
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 15px;
 }
 
 h3 {
@@ -130,11 +144,12 @@ ul {
 
 li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 25px;
+    font-weight: bold;
 }
 
 a {
-    color: #42b983;
+    color: #7d938a;
 }
 
 .arrow {
@@ -155,6 +170,16 @@ a {
 .double-down {
     width: auto;
     height: 20vh;
+}
+
+@media only screen and (max-width: 700px) {
+
+    #headshot {
+        max-width: 50%;
+    }
+    li {
+        display: block;
+    }
 }
 
 @keyframes bounce {
