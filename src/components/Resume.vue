@@ -3,10 +3,7 @@
         <div>
             <b-navbar type="light">
                 <b-navbar-nav class="navbar navbar-default center">
-                    <b-nav-item href="/">About</b-nav-item>
-                    <b-nav-item href="#contact-wrapper">
-                        <router-link tag="li" to="/contact">Contact</router-link>
-                    </b-nav-item>
+                    <b-nav-item href="/">Home</b-nav-item>
                 </b-navbar-nav>
             </b-navbar>
         </div>
@@ -120,7 +117,7 @@ export default {
 }
 .section-title {
     text-align: center;
-    margin: 15px;
+    margin: 20px;
     color: #7d938a; 
 }
 

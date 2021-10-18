@@ -3,10 +3,7 @@
         <div>
             <b-navbar type="light">
                 <b-navbar-nav class="navbar navbar-default center">
-                    <b-nav-item href="/">About</b-nav-item>
-                    <b-nav-item href="#contact-wrapper">
-                        <router-link tag="li" to="/contact">Contact</router-link>
-                    </b-nav-item>
+                    <b-nav-item href="/">Home</b-nav-item>
                 </b-navbar-nav>
             </b-navbar>
         </div>
@@ -93,6 +90,8 @@ export default {
 
 li {
     list-style-type: none;
+    width: 50%;
+    display: inline-block;
 }
 
 a {
@@ -106,5 +105,9 @@ a img {
 
 main {
     padding-bottom: 10rem;
+}
+h3 {
+    font-family: Open Sans;
+    padding: 1rem 0;
 }
 </style>
