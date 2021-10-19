@@ -14,10 +14,10 @@
                     <b-navbar type="light">
                         <b-navbar-nav class="navbar navbar-default center">
                             <b-nav-item href="#">Home</b-nav-item>
-                            <b-nav-item href="#contact-wrapper">
+                            <b-nav-item>
                                 <router-link tag="li" class="nav-item" to="/resume">Career History</router-link>
                             </b-nav-item>
-                            <b-nav-item href="#contact-wrapper">
+                            <b-nav-item>
                                 <router-link tag="li" to="/contact">Links</router-link>
                             </b-nav-item>
                         </b-navbar-nav>

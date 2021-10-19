@@ -129,7 +129,4 @@ h3 {
     padding: 1rem 0;
 }
 
-h1 {
-    color: #7d938a;
-}
 </style>
