@@ -29,8 +29,9 @@
             <h1>Freelance Projects</h1>
             <div class="link-div">
                 <li>
-                    <a href="https://sugarhoneytruck.com/" target="_blank"></a>
-                    <img class="link-img" src="../assets/SHMAINLOGO1TRANSPARENT-01.png">
+                    <a href="https://sugarhoneytruck.com/" target="_blank">
+                        <img class="link-img" src="../assets/SHMAINLOGO1TRANSPARENT-01.png">
+                    </a>
                 </li>
             </div>
         </div>
@@ -126,5 +127,9 @@ a img {
 h3 {
     font-family: Open Sans;
     padding: 1rem 0;
+}
+
+h1 {
+    color: #7d938a;
 }
 </style>
