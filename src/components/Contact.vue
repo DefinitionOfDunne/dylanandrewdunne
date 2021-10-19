@@ -111,7 +111,6 @@ export default {
 
 li {
     list-style-type: none;
-    width: 50%;
     display: inline-block;
 }
 

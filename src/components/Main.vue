@@ -18,7 +18,7 @@
                                 <router-link tag="li" class="nav-item" to="/resume">Career History</router-link>
                             </b-nav-item>
                             <b-nav-item>
-                                <router-link tag="li" to="/contact">Links</router-link>
+                                <router-link tag="li" to="/contact">Resources</router-link>
                             </b-nav-item>
                         </b-navbar-nav>
                     </b-navbar>
