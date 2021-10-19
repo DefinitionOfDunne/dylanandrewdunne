@@ -7,8 +7,10 @@ import Contact from '@/components/Contact'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
+    scrollBehavior() {
+        return { x: 0, y: 0 };
+    },
+    routes: [{
             path: '/resume',
             name: 'Resume',
             component: Resume
@@ -23,6 +25,6 @@ export default new Router({
             name: 'Contact',
             component: Contact
         }
-       // { path: '*', component: NotFoundComponent }
+        // { path: '*', component: NotFoundComponent }
     ]
 })

@@ -35,6 +35,11 @@
                 </div>
             </section>
         </main>
+        <footer>
+           <p class="cp-text">
+            © Copyright 2021 Dylan A. Dunne
+        </p> 
+        </footer>
     </div>
 </template>
 <script>
@@ -172,13 +177,31 @@ a {
     height: 20vh;
 }
 
+.cp-text{ 
+    color: #7d938a;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+    height: 5rem;
+}
+
+footer {
+    clear: both;
+    position: relative;
+    margin-top: 100px;
+}
+
 @media only screen and (max-width: 700px) {
 
     #headshot {
         max-width: 50%;
     }
+
     li {
         display: block;
+    }
+
+    #bio-div {
+        width: 95%;
+        padding: 15px;
     }
 }
 

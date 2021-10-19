@@ -7,6 +7,7 @@
                 </b-navbar-nav>
             </b-navbar>
         </div>
+        <div id="link-wrapper">
         <div class="link-div">
             <li>
                 <a href="https://github.com/DefinitionOfDunne/" target="_blank">
@@ -23,6 +24,7 @@
             <li>
                 <img class="link-img" src="../assets/icon-phone-18.jpg" @click="showPhoneModal">
             </li>
+        </div>
         </div>
         <b-modal centered ref="phone-modal" hide-footer title="Cell Phone">
             <div class="d-block text-center">
@@ -66,8 +68,18 @@ export default {
     margin: 5rem auto;
 }
 
+#link-wrapper {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 25%;
+}
+
 .link-img {
-    height: 15rem;
+    height: 10rem;
     margin: auto;
     border-radius: 50%;
     border-style: solid;
@@ -103,9 +115,6 @@ a img {
     display: block;
 }
 
-main {
-    padding-bottom: 10rem;
-}
 h3 {
     font-family: Open Sans;
     padding: 1rem 0;
