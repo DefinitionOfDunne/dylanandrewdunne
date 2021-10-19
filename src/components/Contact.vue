@@ -8,23 +8,31 @@
             </b-navbar>
         </div>
         <div id="link-wrapper">
-        <div class="link-div">
-            <li>
-                <a href="https://github.com/DefinitionOfDunne/" target="_blank">
-                    <img class="link-img" src="../assets/GitHub-Mark-120px-plus.png">
-                </a>
-            </li>
-        </div>
-        <div class="link-div">
-            <li>
-                <img class="link-img" src="../assets/email_icon.png" @click="showEmailModal">
-            </li>
-        </div>
-        <div class="link-div">
-            <li>
-                <img class="link-img" src="../assets/icon-phone-18.jpg" @click="showPhoneModal">
-            </li>
-        </div>
+            <h1>Contact</h1>
+            <div class="link-div">
+                <li>
+                    <a href="https://github.com/DefinitionOfDunne/" target="_blank">
+                        <img class="link-img" src="../assets/GitHub-Mark-120px-plus.png">
+                    </a>
+                </li>
+            </div>
+            <div class="link-div">
+                <li>
+                    <img class="link-img" src="../assets/email_icon.png" @click="showEmailModal">
+                </li>
+            </div>
+            <div class="link-div">
+                <li>
+                    <img class="link-img" src="../assets/icon-phone-18.jpg" @click="showPhoneModal">
+                </li>
+            </div>
+            <h1>Freelance Projects</h1>
+            <div class="link-div">
+                <li>
+                    <a href="https://sugarhoneytruck.com/" target="_blank"></a>
+                    <img class="link-img" src="../assets/SHMAINLOGO1TRANSPARENT-01.png">
+                </li>
+            </div>
         </div>
         <b-modal centered ref="phone-modal" hide-footer title="Cell Phone">
             <div class="d-block text-center">
@@ -34,8 +42,8 @@
         </b-modal>
         <b-modal centered info ref="email-modal" hide-footer title="Email">
             <div class="d-block text-center">
-                <h3>Email me at 
-                <a href="mailto:DylanADunne@gmail.com">DylanADunne@gmail.com </a></h3>
+                <h3>Email me at
+                    <a href="mailto:DylanADunne@gmail.com">DylanADunne@gmail.com </a></h3>
             </div>
             <b-button class="mt-3" variant="outline-danger" block @click="hideEmailModal">Close</b-button>
         </b-modal>
@@ -75,16 +83,16 @@ export default {
     margin: auto;
     padding: 2rem;
     background-color: white;
-    border-radius: 25%;
+    border-radius: 25px;
 }
 
 .link-img {
-    height: 10rem;
+    height: 12rem;
+    padding: 5px;
     margin: auto;
     border-radius: 50%;
     border-style: solid;
     transition: transform .2s;
-    /* Animation */
 }
 
 .link-img:hover {
